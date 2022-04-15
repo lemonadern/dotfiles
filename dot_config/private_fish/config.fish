@@ -14,9 +14,16 @@ end
 
 eval (gh completion -s fish| source)
 
+# paths
+# cargo
+set -gx CARGO_HOME $HOME/.cargo
+fish_add_path $CARGO_HOME/bin
+
+# deno
+fish_add_path $HOME/.deno/bin
 
 
-
+# Python
 alias python 'python3'
 alias py 'python3'
 alias pip 'pip3'
