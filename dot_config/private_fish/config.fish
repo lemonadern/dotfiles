@@ -22,6 +22,9 @@ fish_add_path $CARGO_HOME/bin
 # deno
 fish_add_path $HOME/.deno/bin
 
+# chezmoi
+alias chezap 'chezmoi apply'
+alias chezcd 'chezmoi cd'
 
 # Python
 alias python 'python3'
@@ -57,6 +60,7 @@ alias st 'git status'
 alias gl 'git log'
 alias glo 'git log --oneline'
 alias ga 'git add'
+alias ga. 'git add .'
 alias gc 'git commit'
 alias gcm 'git commit -m'
 alias gdf 'git diff'
