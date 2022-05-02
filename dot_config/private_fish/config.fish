@@ -87,3 +87,7 @@ alias yd 'yarn dev'
 alias yb 'yarn build'
 alias yw 'yarn workspace'
 alias yl 'yarn lint'
+
+# tomcat (shell)
+alias tcstart '~/apache-tomcat-9.0.45/bin/startup.sh'
+alias tcstop 'apache-tomcat-9.0.45/bin/shutdown.sh'
