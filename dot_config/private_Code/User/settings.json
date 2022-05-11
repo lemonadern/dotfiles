@@ -1,0 +1,35 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "workbench.tree.indent": 18,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  "editor.tabSize": 2,
+  "redhat.telemetry.enabled": true,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.linux": "/home/lemonadern/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.kubectl-path.linux": "/home/lemonadern/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path.linux": "/home/lemonadern/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.acceptSuggestionOnEnter": "off"
+  }
+}
