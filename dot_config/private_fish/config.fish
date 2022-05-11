@@ -41,7 +41,7 @@ alias ... 'cd ../..'
 alias cpc 'xsel --clipboard --input'
 alias et 'exit'
 
-# docker 
+# docker
 alias d 'docker'
 alias dst 'docker stats'
 alias dps 'docker ps'
@@ -49,7 +49,7 @@ alias dpa 'docker ps -a'
 alias drm 'docker rm'
 alias dim 'docker images'
 
-# docker-compose 
+# docker-compose
 alias dc 'docker-compose'
 alias dcu 'docker-compose up'
 alias dcd 'docker-compose down'
