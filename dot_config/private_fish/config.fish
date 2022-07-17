@@ -14,6 +14,9 @@ end
 
 eval (gh completion -s fish| source)
 
+# nimble (choosenim)
+fish_add_path $HOME/.nimble/bin
+
 # paths
 # cargo
 set -gx CARGO_HOME $HOME/.cargo
