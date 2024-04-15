@@ -6,8 +6,8 @@ in {
   imports = [
     ./nix/git.nix
     ./nix/neovim.nix
-    # ./nix/zsh.nix
-    # ./nix/starship.nix
+    ./nix/zsh
+    ./nix/starship.nix
     # ./nix/tmux.nix
   ];
 
@@ -27,7 +27,7 @@ in {
         neofetch
     ];
   };
-  
+
   nix = {
     package = pkgs.nixFlakes;
     settings = {

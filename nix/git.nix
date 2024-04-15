@@ -7,6 +7,7 @@
         a = "add";
         cm = "commit -m";
         df = "diff";
+        br = "branch";
     };
 
     extraConfig = {
