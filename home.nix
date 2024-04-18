@@ -8,6 +8,7 @@ in {
     ./nix/neovim.nix
     ./nix/zsh
     ./nix/starship.nix
+    # ./nix/alacritty.nix
     # ./nix/tmux.nix
   ];
 
@@ -18,12 +19,18 @@ in {
     packages = with pkgs; [
         nil 
         yarn
+        pnpm
         nodejs_20
         deno
-        python3
         rye
         gh
         ghq
+        fzf
+        (nerdfonts.override {
+          fonts = [
+            "JetBrainsMono"
+          ];
+        })
         neofetch
     ];
   };
@@ -37,3 +44,4 @@ in {
 
   programs.home-manager.enable = true;
 }
+

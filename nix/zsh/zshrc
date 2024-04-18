@@ -4,3 +4,21 @@ export LANG='ja_JP.UTF-8'
 
 export PATH=$PATH:"$HOME/.nix-profile/bin"
 
+bindkey -r "^[[A"
+bindkey -r "^[[B"
+bindkey -r "^[[C"
+bindkey -r "^[[D"
+
+# ghq, fzf
+function ghq-fzf() {
+  local src=$(ghq list | fzf --preview "ls -laph --time-style=+'%Y-%m-%d' $(ghq root)/{} | tail -n+4 | awk '{print \$6, \$7}'")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+
+autoload -Uz ghq-fzf
+zle -N ghq-fzf
+bindkey '^]' ghq-fzf
