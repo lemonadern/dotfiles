@@ -19,13 +19,17 @@ in {
     packages = with pkgs; [
         nil 
         yarn
-        pnpm
+        corepack_20
         nodejs_20
         deno
+        cargo
+        rustc
         rye
         gh
         ghq
         fzf
+        eza
+        bat
         (nerdfonts.override {
           fonts = [
             "JetBrainsMono"

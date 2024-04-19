@@ -10,7 +10,9 @@
     history = {
       expireDuplicatesFirst = true;
       extended = true;
-      ignoreDups = true;
+      ignoreDups = true; # 重複をignore
+      ignoreSpace = true; # 先頭にスペースの入ったコマンドをignore
+      ignoreAllDups = true;
       path = "$HOME/.zsh_history";
       save = 10000;
       share = true;
