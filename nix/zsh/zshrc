@@ -9,9 +9,20 @@ bindkey -r "^[[B"
 bindkey -r "^[[C"
 bindkey -r "^[[D"
 
+#########################################
+# fzf settings
+#########################################
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
+
+# fzf の fuzzy search を発動させるトリガー
+export FZF_COMPLETION_TRIGGER=~~
+
 # ghq, fzf
 function ghq-fzf() {
-  local src=$(ghq list | fzf --preview "ls -laph --time-style=+'%Y-%m-%d' $(ghq root)/{} | tail -n+4 | awk '{print \$6, \$7}'")
+  local src=$(ghq list | fzf --preview "ls -laph --time-style=+'%Y-%m-%d' $(ghq root)/{} | tail -n+4 | awk '{print \$6, \$7}'" --reverse)
   if [ -n "$src" ]; then
     BUFFER="cd $(ghq root)/$src"
     zle accept-line
