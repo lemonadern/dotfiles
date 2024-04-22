@@ -1,7 +1,4 @@
-{ config, pkgs, ... }:
-
-let inherit (builtins) getEnv;
-in {
+{ pkgs, ... }: {
   imports = [
     ./nix/git.nix
     ./nix/gh.nix
