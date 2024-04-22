@@ -29,6 +29,7 @@ in {
       fzf
       eza
       bat
+      ripgrep
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       neofetch
     ];
@@ -36,7 +37,10 @@ in {
 
   nix = {
     package = pkgs.nixFlakes;
-    settings = { experimental-features = "nix-command flakes"; };
+    settings = {
+      experimental-features = "nix-command flakes";
+      auto-optimise-store = true;
+    };
   };
 
   programs.home-manager.enable = true;

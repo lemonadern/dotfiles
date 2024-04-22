@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   programs.zsh = {
     enable = true;
+
+    autocd = true;
     enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
@@ -14,8 +16,8 @@
       ignoreAllDups = true;
       path = "$HOME/.zsh_history";
       save = 10000;
-      share = true;
       size = 10000;
+      share = true;
     };
     shellAliases = {
       ".." = "cd ..";
@@ -25,8 +27,19 @@
       g = "git";
       ga = "git add";
       "ga." = "git add .";
+      gcm = "git commit -m";
       st = "git status";
       gdf = "git diff";
+
+      et = "exit";
+
+      cat = "bat";
+      grep = "rg";
+      ls = "eza --classify=always";
+      la = "eza --all --classify=always"; # ls -A
+      ll = "eza --all --long --classify=always"; # ls -alF
+      lsg = "eza --all --long --classify=always --git";
+      tree = "eza --icons=always --classify=always --tree";
 
     };
     initExtra = builtins.readFile ./zshrc;
