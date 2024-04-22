@@ -40,24 +40,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
-        "vimdoc-ja": "vimdoc-ja"
-      }
-    },
-    "vimdoc-ja": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1713186012,
-        "narHash": "sha256-DOZ5K1ht1K34CEkNBy5oNgA+49Ze5ibm4Ne7kmb77eM=",
-        "owner": "vim-jp",
-        "repo": "vimdoc-ja",
-        "rev": "a0095e833e2a5aa85172bbd743de7394f8bebbe9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vim-jp",
-        "repo": "vimdoc-ja",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
