@@ -4,6 +4,7 @@ let inherit (builtins) getEnv;
 in {
   imports = [
     ./nix/git.nix
+    ./nix/gh.nix
     ./nix/neovim
     ./nix/zsh
     ./nix/starship.nix
@@ -24,7 +25,6 @@ in {
       cargo
       rustc
       rye
-      gh
       ghq
       fzf
       eza
