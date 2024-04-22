@@ -2,10 +2,8 @@
   programs.neovim = {
     enable = true;
 
-    withPython3 = true;
     viAlias = true;
     vimAlias = true;
-    extraConfig = builtins.readFile ./init.vim;
 
     plugins = with pkgs.vimPlugins; [
       vim-nix
@@ -32,5 +30,8 @@
         };
       };
     };
+
+    extraConfig = builtins.readFile ./init.vim;
+
   };
 }

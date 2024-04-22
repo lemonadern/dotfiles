@@ -10,6 +10,7 @@ in {
     ./nix/starship.nix
     # ./nix/alacritty.nix
     ./nix/tmux.nix
+    ./nix/direnv.nix
   ];
 
   home = {
@@ -20,7 +21,7 @@ in {
       nil
       yarn
       corepack_20
-      nodejs_20
+      nodejs-slim_20
       deno
       cargo
       rustc
