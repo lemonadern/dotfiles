@@ -4,7 +4,9 @@
 
     settings = {
       add_newline = true;
+
       format = lib.concatStrings [
+        # https://starship.rs/config/#default-prompt-format
         "$directory"
         "$git_branch"
         "$git_commit"
@@ -45,6 +47,10 @@
         "$line_break"
         "$character"
       ];
+
+      nodejs = {
+        detect_extensions = ["mjs"  "cjs" "mts" "cts"]; # remove `js` and `ts` from default
+      };
     };
   };
 }
