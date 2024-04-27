@@ -16,6 +16,7 @@
     stateVersion = "23.11";
     packages = with pkgs; [
       nil
+      xclip
       yarn
       corepack_20
       nodejs-slim_20
