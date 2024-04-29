@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   programs.zsh = {
     enable = true;
 
@@ -33,7 +33,6 @@
 
       et = "exit";
 
-      cat = "bat";
       grep = "rg";
       ls = "eza --classify=always";
       la = "eza --all --classify=always"; # ls -A

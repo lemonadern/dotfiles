@@ -2,6 +2,10 @@ export EDITOR='vim'
 export VISUAL='vim'
 export LANG='ja_JP.UTF-8'
 
+# nix
+if [ -e /home/lemonadern/.nix-profile/etc/profile.d/nix.sh ]; then . /home/lemonadern/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+#. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 export PATH=$PATH:"$HOME/.nix-profile/bin"
 
 bindkey -r "^[[A"

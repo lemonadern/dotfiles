@@ -49,7 +49,8 @@
       ];
 
       nodejs = {
-        detect_extensions = ["mjs"  "cjs" "mts" "cts"]; # remove `js` and `ts` from default
+        detect_extensions =
+          [ "mjs" "cjs" "mts" "cts" ]; # remove `js` and `ts` from default
       };
     };
   };
