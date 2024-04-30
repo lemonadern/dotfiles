@@ -1,13 +1,13 @@
 { pkgs, ... }: {
   imports = [
-    ./nix/git.nix
-    ./nix/gh.nix
-    ./nix/neovim
-    ./nix/zsh
-    ./nix/starship.nix
-    # ./nix/alacritty.nix
-    ./nix/tmux.nix
-    ./nix/direnv.nix
+    ./modules/git.nix
+    ./modules/gh.nix
+    ./modules/neovim
+    ./modules/zsh
+    ./modules/starship.nix
+    # ./modules/alacritty.nix
+    ./modules/tmux.nix
+    ./modules/direnv.nix
   ];
 
   home = {
