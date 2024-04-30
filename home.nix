@@ -21,6 +21,7 @@
       corepack_20
       nodejs-slim_20
       deno
+      perl # using in zsh git switch (`modules/zsh/zshrc`)
       cargo
       rustc
       rye
