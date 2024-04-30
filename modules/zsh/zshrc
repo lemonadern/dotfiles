@@ -17,10 +17,10 @@ bindkey -r "^[[D"
 # fzf settings
 #########################################
 
-if [ -n "${commands[fzf-share]}" ]; then
+# if [ -n "${commands[fzf-share]}" ]; then
   source "$(fzf-share)/key-bindings.zsh"
   source "$(fzf-share)/completion.zsh"
-fi
+# fi
 
 # fzf の fuzzy search を発動させるトリガー
 export FZF_COMPLETION_TRIGGER=~~
@@ -56,19 +56,6 @@ if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]
     zstyle ':chpwd:*' recent-dirs-default true
     zstyle ':chpwd:*' recent-dirs-max 1000
 fi
-
-# cdr, fzf
-function fzf-cdr() {
-    local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf --reverse)
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N fzf-cdr
-setopt noflowcontrol
-bindkey '^q' fzf-cdr
 
 # git switch
 function select-git-switch() {
