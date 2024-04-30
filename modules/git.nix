@@ -4,6 +4,8 @@
 
     aliases = {
       st = "status";
+      sw = "switch";
+      sc = "switch -c";
       a = "add";
       cm = "commit -m";
       df = "diff";
