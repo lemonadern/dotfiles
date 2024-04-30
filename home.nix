@@ -27,8 +27,9 @@
       rye
       ghq
       fzf
-      eza
-      bat
+      eza # ls alternative
+      bat # cat alternative
+      fd # find alternative
       ripgrep
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       neofetch
