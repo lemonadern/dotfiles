@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "'HackGen Console NF', 'monospace', monospace",
+    "workbench.tree.indent": 20,
+    "files.exclude": {
+        "**/.direnv": true
+    },
+    "search.exclude": {
+        "**/.direnv": true
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
+}
