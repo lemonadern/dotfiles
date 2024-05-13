@@ -1,1 +1,1 @@
-{ programs.tmux = { enable = false; }; }
+{programs.tmux = {enable = false;};}

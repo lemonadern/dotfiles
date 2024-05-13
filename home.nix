@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./modules/git.nix
     ./modules/gh.nix
@@ -16,28 +16,30 @@
     stateVersion = "23.11";
     packages = with pkgs; [
       xclip
-      nil
+
+      nil # nix LS
       alejandra # nix formatter
       lua-language-server
       nodePackages.vim-language-server
 
+      # utilities
       yarn
       corepack_20
       nodejs-slim_20
       deno
       rye
       ghq
+      fzf
 
       perl # using in zsh git switch (`modules/zsh/zshrc`)
 
-      fzf
       # classic command alternatives
       eza # ls
       bat # cat
       fd # find
       ripgrep # grep
 
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
     ];
   };
@@ -52,4 +54,3 @@
 
   programs.home-manager.enable = true;
 }
-

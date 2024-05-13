@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.neovim = {
     enable = true;
 
@@ -56,11 +56,9 @@
         type = "lua";
         config = builtins.readFile ./config/nvim-surround.lua;
       }
-
     ];
 
     extraConfig = builtins.readFile ./init.vim;
     # extraLuaConfig = builtins.readFile ./init.lua;
-
   };
 }

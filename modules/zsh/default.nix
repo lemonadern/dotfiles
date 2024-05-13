@@ -40,7 +40,6 @@
       ll = "eza --all --long --classify=always"; # ls -alF
       lsg = "eza --all --long --classify=always --git";
       tree = "eza --icons=always --classify=always --tree";
-
     };
     initExtra = builtins.readFile ./zshrc;
     profileExtra = builtins.readFile ./zprofile;

@@ -7,21 +7,23 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
-    let
-      # inherit (builtins) getEnv;
-      inherit (home-manager.lib) homeManagerConfiguration;
-    in {
-      homeConfigurations = {
-        lemonadern = let
-          system = "x86_64-linux";
-          pkgs = import nixpkgs { inherit system; };
-        in homeManagerConfiguration {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
+    inherit (home-manager.lib) homeManagerConfiguration;
+  in {
+    homeConfigurations = {
+      lemonadern = let
+        system = "x86_64-linux";
+        pkgs = import nixpkgs {inherit system;};
+      in
+        homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [./home.nix];
         };
-      };
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
     };
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+  };
 }
-
