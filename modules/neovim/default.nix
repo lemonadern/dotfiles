@@ -7,6 +7,7 @@
 
     plugins = with pkgs.vimPlugins; [
       vim-nix
+      vim-commentary
       {
         plugin = kanagawa-nvim;
         config = ''
@@ -14,37 +15,12 @@
         '';
       }
 
-      nvim-lspconfig
       {
-        plugin = mason-nvim;
+        plugin = nvim-treesitter;
         type = "lua";
-        config = builtins.readFile ./config/mason-nvim.lua;
+        config = builtins.readFile ./config/nvim-treesitter.lua;
       }
-      {
-        plugin =mason-lspconfig-nvim;
-        type = "lua";
-        config = builtins.readFile ./config/mason-lspconfig-nvim.lua;
-      }
-      
-
-      nvim-cmp
-      cmp-nvim-lsp
-      vim-vsnip
-
-      # vim-vsnip
-      # {
-      #   plugin = nvim-cmp;
-      #   type = "lua";
-      #   config = builtins.readFile ./config/nvim-cmp.lua;
-      # }
-      # cmp-nvim-lsp
-      # {
-      #   plugin = nvim-lspconfig;
-      #   type = "lua";
-      #   config = builtins.readFile ./config/nvim-lspconfig.lua;
-      # }
-
-      # # treesitter
+      # treesitter
       # {
       #   plugin = nvim-treesitter;
       #   type = "lua";
@@ -56,23 +32,32 @@
       # nvim-treesitter-parsers.typescript
       # nvim-treesitter-parsers.tsx
 
-    ];
+      {
+        plugin = lualine-nvim;
+        type = "lua";
+        config = builtins.readFile ./config/lualine-nvim.lua;
+      }
 
-    coc = {
-      enable = true;
-      settings = {
-        languageserver = {
-          nix = {
-            command = "nil";
-            filetypes = [ "nix" ];
-            rootPatterns = [ "flake.nix" ];
-            settings = {
-              nil = { formatting = { command = [ "nixpkgs-fmt" ]; }; };
-            };
-          };
-        };
-      };
-    };
+      vim-vsnip
+      {
+        plugin = nvim-cmp;
+        type = "lua";
+        config = builtins.readFile ./config/nvim-cmp.lua;
+      }
+      cmp-nvim-lsp
+      {
+        plugin = nvim-lspconfig;
+        type = "lua";
+        config = builtins.readFile ./config/nvim-lspconfig.lua;
+      }
+
+      {
+        plugin = nvim-surround;
+        type = "lua";
+        config = builtins.readFile ./config/nvim-surround.lua;
+      }
+
+    ];
 
     extraConfig = builtins.readFile ./init.vim;
     # extraLuaConfig = builtins.readFile ./init.lua;

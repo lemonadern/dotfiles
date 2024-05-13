@@ -18,6 +18,7 @@
       xclip
       nil
       alejandra # nix formatter
+      lua-language-server
       nodePackages.vim-language-server
 
       yarn

@@ -1,0 +1,1 @@
+local lualine = require('lualine')
