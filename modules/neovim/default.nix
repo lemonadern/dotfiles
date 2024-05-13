@@ -14,6 +14,23 @@
         '';
       }
 
+      nvim-lspconfig
+      {
+        plugin = mason-nvim;
+        type = "lua";
+        config = builtins.readFile ./config/mason-nvim.lua;
+      }
+      {
+        plugin =mason-lspconfig-nvim;
+        type = "lua";
+        config = builtins.readFile ./config/mason-lspconfig-nvim.lua;
+      }
+      
+
+      nvim-cmp
+      cmp-nvim-lsp
+      vim-vsnip
+
       # vim-vsnip
       # {
       #   plugin = nvim-cmp;

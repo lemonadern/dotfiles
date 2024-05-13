@@ -17,8 +17,7 @@
     packages = with pkgs; [
       xclip
       nil
-      alejandra
-      lua-language-server
+      alejandra # nix formatter
       nodePackages.vim-language-server
 
       yarn
