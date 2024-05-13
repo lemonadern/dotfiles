@@ -13,6 +13,32 @@
           colorscheme kanagawa
         '';
       }
+
+      # vim-vsnip
+      # {
+      #   plugin = nvim-cmp;
+      #   type = "lua";
+      #   config = builtins.readFile ./config/nvim-cmp.lua;
+      # }
+      # cmp-nvim-lsp
+      # {
+      #   plugin = nvim-lspconfig;
+      #   type = "lua";
+      #   config = builtins.readFile ./config/nvim-lspconfig.lua;
+      # }
+
+      # # treesitter
+      # {
+      #   plugin = nvim-treesitter;
+      #   type = "lua";
+      #   config = builtins.readFile ./config/nvim-treesitter.lua;
+      # }
+      # nvim-treesitter-parsers.json
+      # nvim-treesitter-parsers.toml
+      # nvim-treesitter-parsers.javascript
+      # nvim-treesitter-parsers.typescript
+      # nvim-treesitter-parsers.tsx
+
     ];
 
     coc = {
@@ -32,6 +58,7 @@
     };
 
     extraConfig = builtins.readFile ./init.vim;
+    # extraLuaConfig = builtins.readFile ./init.lua;
 
   };
 }

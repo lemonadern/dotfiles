@@ -15,20 +15,28 @@
     homeDirectory = "/home/lemonadern";
     stateVersion = "23.11";
     packages = with pkgs; [
-      nil
       xclip
+      nil
+      alejandra
+      lua-language-server
+      nodePackages.vim-language-server
+
       yarn
       corepack_20
       nodejs-slim_20
       deno
-      perl # using in zsh git switch (`modules/zsh/zshrc`)
       rye
       ghq
+
+      perl # using in zsh git switch (`modules/zsh/zshrc`)
+
       fzf
-      eza # ls alternative
-      bat # cat alternative
-      fd # find alternative
-      ripgrep
+      # classic command alternatives
+      eza # ls
+      bat # cat
+      fd # find
+      ripgrep # grep
+
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       neofetch
     ];
