@@ -27,8 +27,8 @@ local on_attach = function(_, bufnr)
   --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   -- end, buffer_options)
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, buffer_options)
-  -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, buffer_options)
-  vim.keymap.set('n', '<space>.', vim.lsp.buf.code_action, buffer_options)
+  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, buffer_options)
+  vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, buffer_options)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffer_options)
   vim.keymap.set('n', '<space>f', function()
     vim.lsp.buf.format {
@@ -80,4 +80,3 @@ lsp_config.biome.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-

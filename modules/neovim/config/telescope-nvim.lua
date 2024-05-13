@@ -28,3 +28,5 @@ local options = {
 vim.keymap.set('n', '<C-p>', builtin.find_files, options)
 vim.keymap.set('n', '<C-g>', builtin.live_grep, options)
 -- vim.keymap.set('n', '<C-f>', "<Cmd>Telescope frecency<CR>", options)
+vim.keymap.set('n', ';s', '<Cmd>Telescope git_status<CR>')
+vim.keymap.set('n', ';b', '<Cmd>Telescope buffers<CR>')
