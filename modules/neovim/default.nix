@@ -44,11 +44,11 @@
         type = "lua";
         config = builtins.readFile ./config/nvim-lspconfig.lua;
       }
-      {
-        plugin = lspsaga-nvim;
-        type = "lua";
-        config = builtins.readFile ./config/lspsaga-nvim.lua;
-      }
+      # {
+      #   plugin = lspsaga-nvim;
+      #   type = "lua";
+      #   config = builtins.readFile ./config/lspsaga-nvim.lua;
+      # }
 
       {
         plugin = telescope-nvim;
