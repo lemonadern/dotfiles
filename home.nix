@@ -20,12 +20,17 @@
       nil # nix LS
       alejandra # nix formatter
       lua-language-server
+      rust-analyzer
       nodePackages.vim-language-server
+      ast-grep
+
+      act
+      actionlint
 
       # utilities
       yarn
       corepack_20
-      nodejs-slim_20
+      nodejs_20
       deno
       rye
       ghq
@@ -42,6 +47,13 @@
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
     ];
+  };
+
+  programs.lazygit = {
+    enable = true;
+    settings = {
+      gui.language = "en";
+    };
   };
 
   nix = {
