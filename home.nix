@@ -32,7 +32,11 @@
       corepack_20
       nodejs_20
       deno
+      python3
+      go
+      opam
       rye
+      rbenv
       ghq
       fzf
 

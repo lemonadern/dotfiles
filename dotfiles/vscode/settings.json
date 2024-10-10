@@ -13,7 +13,7 @@
     "explorer.confirmDelete": false,
     "git.openRepositoryInParentFolders": "always",
     "[json]": {
-        "editor.defaultFormatter": "biomejs.biome"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
@@ -30,5 +30,20 @@
     "github.copilot.editor.enableAutoCompletions": true,
     "cmake.showOptionsMovedNotification": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "typescript.referencesCodeLens.enabled": true
+    "typescript.referencesCodeLens.enabled": true,
+    "window.zoomLevel": 0.8,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/home/lemonadern/.nix-profile/bin/nvim",
+    "explorer.confirmDragAndDrop": false,
+    "cSpell.userWords": [
+        "indexmap",
+        "proconio",
+        "rstest",
+        "Uroboro"
+    ],
+    "hediet.vscode-drawio.resizeImages": null
 }
