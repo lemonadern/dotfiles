@@ -36,7 +36,6 @@
       go
       opam
       rye
-      rbenv
       ghq
       fzf
 
