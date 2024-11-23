@@ -28,6 +28,11 @@ export PATH=$PATH:"$HOME/.cargo/bin"
   source "$(fzf-share)/completion.zsh"
 # fi
 
+# rbenv
+export PATH=$PATH:"$HOME/.rbenv/bin"
+eval "$(rbenv init - --no-rehash zsh)"
+
+
 # ghq, fzf
 function ghq-fzf() {
   local src=$(ghq list | fzf --preview "ls -laph --time-style=+'%Y-%m-%d' $(ghq root)/{} | tail -n+4 | awk '{print \$6, \$7}'" --reverse)

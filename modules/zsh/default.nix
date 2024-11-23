@@ -32,14 +32,23 @@
       st = "git status";
       gdf = "git diff";
 
+      d = "docker";
+      dcu = "docker compose up";
+      dcud = "docker compose up -d";
+      dcub = "docker compose up --build";
+      dcudb = "docker compose up -d --build";
+      dcd = "docker compose down";
+
+
       et = "exit";
 
-      grep = "rg";
       ls = "eza --classify=always";
       la = "eza --all --classify=always"; # ls -A
       ll = "eza --all --long --classify=always"; # ls -alF
       lsg = "eza --all --long --classify=always --git";
       tree = "eza --icons=always --classify=always --tree";
+
+      
     };
     initExtra = builtins.readFile ./zshrc;
     profileExtra = builtins.readFile ./zprofile;

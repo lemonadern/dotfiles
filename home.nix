@@ -13,7 +13,7 @@
   home = {
     username = "lemonadern";
     homeDirectory = "/home/lemonadern";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
     packages = with pkgs; [
       xclip
 
@@ -23,6 +23,7 @@
       rust-analyzer
       nodePackages.vim-language-server
       ast-grep
+      pre-commit
 
       act
       actionlint
@@ -36,16 +37,21 @@
       go
       opam
       rye
+      ruff
       ghq
       fzf
 
       perl # using in zsh git switch (`modules/zsh/zshrc`)
 
+      sqlite
+
       # classic command alternatives
+      gdb
       eza # ls
       bat # cat
       fd # find
       ripgrep # grep
+      jnv # Interactive JSON viewer and jq filter editor
 
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
@@ -60,7 +66,7 @@
   };
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
