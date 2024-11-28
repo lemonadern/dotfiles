@@ -5,7 +5,6 @@
     ./modules/neovim
     ./modules/zsh
     ./modules/starship.nix
-    # ./modules/alacritty.nix
     ./modules/tmux.nix
     ./modules/direnv.nix
   ];
@@ -22,13 +21,14 @@
       lua-language-server
       rust-analyzer
       nodePackages.vim-language-server
-      ast-grep
       pre-commit
 
       act
       actionlint
+      rbenv
+      sqlite
 
-      # utilities
+      # language environments
       yarn
       corepack_20
       nodejs_20
@@ -38,20 +38,21 @@
       opam
       rye
       ruff
+      perl # using in zsh git switch (`modules/zsh/zshrc`)
+
+      gdb
       ghq
       fzf
 
-      perl # using in zsh git switch (`modules/zsh/zshrc`)
-
-      sqlite
-
       # classic command alternatives
-      gdb
       eza # ls
       bat # cat
       fd # find
       ripgrep # grep
+
       jnv # Interactive JSON viewer and jq filter editor
+      ast-grep # grep for ast, not text
+      tokei # code counter
 
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
