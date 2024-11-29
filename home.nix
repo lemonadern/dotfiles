@@ -53,6 +53,7 @@
       jnv # Interactive JSON viewer and jq filter editor
       ast-grep # grep for ast, not text
       tokei # code counter
+      bottom # graphical process/system monitor (fancy `top`)
 
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
