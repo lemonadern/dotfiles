@@ -24,6 +24,7 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
       dl = "cd ~/Downloads/";
+      cdg = "cd ~/git/";
 
       g = "git";
       ga = "git add";
@@ -48,6 +49,7 @@
       lsg = "eza --all --long --classify=always --git";
       tree = "eza --icons=always --classify=always --tree";
 
+      ts = "tree-sitter";
       
     };
     initExtra = builtins.readFile ./zshrc;
