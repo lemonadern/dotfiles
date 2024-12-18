@@ -52,11 +52,14 @@
 
       jnv # Interactive JSON viewer and jq filter editor
       ast-grep # grep for ast, not text
+      ripgrep-all # grep for pdf, docx, sqlite, jpg, mp4, etc.
       tokei # code counter
       bottom # graphical process/system monitor (fancy `top`)
+      ivy # an APL like calculator
 
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       neofetch
+      wrangler
     ];
   };
 
