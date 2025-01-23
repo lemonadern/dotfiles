@@ -43,6 +43,7 @@
       gdb
       ghq
       fzf
+      fzf-make
 
       # classic command alternatives
       eza # ls
