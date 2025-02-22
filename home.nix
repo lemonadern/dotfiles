@@ -34,7 +34,6 @@
       nodejs_20
       deno
       python3
-      go
       opam
       rye
       ruff
