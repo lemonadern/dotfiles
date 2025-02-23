@@ -23,6 +23,8 @@
       nodePackages.vim-language-server
       pre-commit
 
+      nodePackages.eas-cli
+
       act
       actionlint
       rbenv
